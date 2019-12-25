@@ -1,0 +1,15 @@
+<html>
+    <h2>fridge planning</h2>
+    <h3>meals</h3>
+      <ul>{% for meal in meals %}
+        <li>{{ meal }}{% endfor %}
+      </ul>
+    <h3>missing ingredients</h3>
+      <ul>{% for food, quantity in missing_ingredients.items %}
+        <li>{{ quantity }} {{ food.units }} {{food.common_name}}{% endfor %}
+      </ul>
+    <h3>excess ingredients</h3>
+      <ul>{% for food, quantity in excess_ingredients.items %}
+        <li>{{ quantity }} {{ food.units }} {{food.common_name}}{% endfor %}
+      </ul>
+</html>
